@@ -4,7 +4,7 @@ const LINKS = {
     donate: "https://www.donationalerts.com/r/your_page", // Ваш DonationAlerts
     youtube: "https://youtube.com/your_channel",
     telegram: "https://t.me/your_telegram",
-    tiktok: "https://tiktok.com/@your_profile"
+    tiktok: "https://tiktok.com/@standjoke"
 };
 
 // Обработчики кнопок
@@ -164,3 +164,4 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
