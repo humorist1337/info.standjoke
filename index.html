@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Самое важное для поисковиков (SEO) -->
+    <title>StandJoke - Официальный сайт игры</title>
+    <meta name="description" content="Скачать StandJoke. Официальный сайт смешной игры StandJoke. Информация о геймплее, режимах, скриншоты и ссылки на соцсети.">
+    <meta name="keywords" content="StandJoke, скачать StandJoke, игра StandJoke, смешная игра, инди игра, юмор, игровой проект">
+    
+    <!-- Для соцсетей (когда делятся ссылкой) -->
+    <meta property="og:title" content="StandJoke - Официальный сайт">
+    <meta property="og:description" content="Смешная и увлекательная игра. Скачай сейчас!">
+    <meta property="og:image" content="https://your-vercel-link.vercel.app/logo.png"> <!-- Поменяете позже -->
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Верхняя часть с логотипом и описанием -->
+        <header class="header">
+            <div class="logo-section">
+                <img src="https://via.placeholder.com/80/6a11cb/FFFFFF?text=SJ" alt="Аватар StandJoke" class="avatar">
+                <div class="title-wrapper">
+                    <h1><img src="https://via.placeholder.com/350x100/2575fc/FFFFFF?text=StandJoke+Logo" alt="Логотип игры StandJoke" class="logo-img"></h1>
+                    <p class="subtitle">Основная информация о проекте</p>
+                </div>
+            </div>
+            <p class="intro-text">Добро пожаловать на официальный сайт игры StandJoke! Здесь вы можете скачать игру, поддержать проект и следить за нами в соцсетях.</p>
+        </header>
+
+        <!-- Основные кнопки -->
+        <div class="button-grid">
+            <button class="btn main-btn download-btn" id="downloadBtn">
+                <i class="fas fa-download"></i> Скачать игру
+            </button>
+            <button class="btn main-btn donate-btn" id="donateBtn">
+                <i class="fas fa-coins"></i> Поддержать проект
+            </button>
+        </div>
+
+        <!-- Блок с соцсетями -->
+        <div class="social-section">
+            <h2><i class="fas fa-hashtag"></i> Соц. сети игры</h2>
+            <div class="social-buttons">
+                <button class="btn social-btn youtube-btn" id="youtubeBtn">
+                    <i class="fab fa-youtube"></i> YouTube
+                </button>
+                <button class="btn social-btn telegram-btn" id="telegramBtn">
+                    <i class="fab fa-telegram"></i> Telegram
+                </button>
+                <button class="btn social-btn tiktok-btn" id="tiktokBtn">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </button>
+            </div>
+        </div>
+
+        <!-- Скриншоты и информация с анимацией -->
+        <section class="screenshots-section">
+            <h2>Игровой процесс и возможности</h2>
+            
+            <div class="feature-block">
+                <div class="screenshot-wrapper">
+                    <div class="frame">
+                        <img src="https://via.placeholder.com/600x338/8A2BE2/FFFFFF?text=Скриншот+1" alt="Скриншот из игры StandJoke" class="screenshot" loading="lazy">
+                    </div>
+                </div>
+                <div class="description">
+                    <h3>Веселый геймплей</h3>
+                    <p>Управляйте своим персонажем в абсурдных ситуациях. Десятки уникальных шуток и реакций.</p>
+                </div>
+            </div>
+
+            <div class="feature-block reverse">
+                <div class="screenshot-wrapper">
+                    <div class="frame">
+                        <img src="https://via.placeholder.com/600x338/20B2AA/FFFFFF?text=Скриншот+2" alt="Еще один скриншот StandJoke" class="screenshot" loading="lazy">
+                    </div>
+                </div>
+                <div class="description">
+                    <h3>Несколько режимов</h3>
+                    <p>Одиночная игра, мультиплеер и специальный "режим безумия". Каждый найдет что-то по душе.</p>
+                </div>
+            </div>
+
+            <div class="feature-block">
+                <div class="screenshot-wrapper">
+                    <div class="frame">
+                        <img src="https://via.placeholder.com/600x338/FF6B6B/FFFFFF?text=Скриншот+3" alt="Скриншот мультиплеера" class="screenshot" loading="lazy">
+                    </div>
+                </div>
+                <div class="description">
+                    <h3>Играйте с друзьями</h3>
+                    <p>Создавайте комнаты, приглашайте друзей и устраивайте соревнования в режиме реального времени.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>StandJoke © 2023. Все права защищены. | Официальный сайт игры</p>
+            <p class="seo-text">Скачать StandJoke бесплатно, игра StandJoke для PC, скачать игру про юмор, инди игра StandJoke, официальный сайт StandJoke</p>
+        </footer>
+    </div>
+
+    <!-- Элементы для анимаций -->
+    <div id="effectsContainer"></div>
+
+    <!-- Подключаем скрипты -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
