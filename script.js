@@ -139,6 +139,20 @@ function createParticleEffect(button, color1, color2 = null) {
     }
 }
 
+/* Эффект для кнопки скачивания */
+.download-btn:hover {
+    animation: download-glow 2s infinite;
+}
+
+@keyframes download-glow {
+    0%, 100% {
+        box-shadow: 0 8px 20px rgba(71, 118, 230, 0.5);
+    }
+    50% {
+        box-shadow: 0 8px 30px rgba(142, 84, 233, 0.8), 0 0 40px rgba(71, 118, 230, 0.4);
+    }
+}
+
 // Добавляем CSS для анимации пульсации
 const style = document.createElement('style');
 style.textContent = `
@@ -148,4 +162,5 @@ style.textContent = `
         100% { transform: scale(1); }
     }
 `;
+
 document.head.appendChild(style);
