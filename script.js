@@ -1,7 +1,7 @@
 const LINKS = {
     download: "https://t.me/+l7UnOI80MvM3ODFi", // Ваш Telegram
     donate: "https://www.donationalerts.com/r/humorist1337", // Ваш DonationAlerts
-    youtube: "https://youtube.com/your_channel", // Замените на свой
+    youtube: "https://www.youtube.com/channel/UCd2hWCQZaG6IlypY9FuLuBQ", // Замените на свой
     telegram: "https://t.me/StandJokeTG", // Замените на свой
     tiktok: "https://tiktok.com/@standjoke" // Замените на свой
 };
@@ -187,3 +187,4 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
