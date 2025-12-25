@@ -1,20 +1,18 @@
-// Конфигурация ссылок (ЗАМЕНИТЕ НА СВОИ!)
 const LINKS = {
-    download: "https://t.me/your_channel_link", // Ваш Telegram канал
-    donate: "https://www.donationalerts.com/r/your_page", // Ваш DonationAlerts
-    youtube: "https://youtube.com/your_channel",
-    telegram: "https://t.me/your_telegram",
-    tiktok: "https://tiktok.com/@standjoke"
+    download: "https://t.me/+l7UnOI80MvM3ODFi", // Ваш Telegram
+    donate: "https://www.donationalerts.com/r/humorist1337", // Ваш DonationAlerts
+    youtube: "https://youtube.com/your_channel", // Замените на свой
+    telegram: "https://t.me/StandJokeTG", // Замените на свой
+    tiktok: "https://tiktok.com/@standjoke" // Замените на свой
 };
 
 // Обработчики кнопок
 document.getElementById('downloadBtn').addEventListener('click', function() {
-    // Простая анимация пульсации
-    this.style.animation = 'pulse 0.5s';
+    // Запускаем новую анимацию для скачивания
+    createDownloadEffect(this);
     setTimeout(() => {
-        this.style.animation = '';
         window.open(LINKS.download, '_blank');
-    }, 500);
+    }, 600);
 });
 
 document.getElementById('donateBtn').addEventListener('click', function() {
@@ -48,6 +46,48 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 featureBlocks.forEach(block => observer.observe(block));
+
+// Эффект для кнопки скачивания (компьютерные частицы)
+function createDownloadEffect(button) {
+    const container = document.getElementById('effectsContainer');
+    const symbols = ['💾', '⬇️', '🎮', '🚀', '⚡', '🔧', '🛠️', '📦'];
+    
+    for (let i = 0; i < 12; i++) {
+        const particle = document.createElement('div');
+        particle.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+        particle.style.position = 'fixed';
+        particle.style.left = (button.getBoundingClientRect().left + button.offsetWidth / 2) + 'px';
+        particle.style.top = (button.getBoundingClientRect().top + button.offsetHeight / 2) + 'px';
+        particle.style.fontSize = '20px';
+        particle.style.zIndex = '1000';
+        particle.style.pointerEvents = 'none';
+        particle.style.userSelect = 'none';
+        particle.style.opacity = '0.8';
+        
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 40 + Math.random() * 60;
+        const duration = 700 + Math.random() * 300;
+        
+        container.appendChild(particle);
+        
+        // Анимация
+        const animation = particle.animate([
+            { 
+                transform: 'translate(0, 0) scale(1) rotate(0deg)',
+                opacity: 1 
+            },
+            { 
+                transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0) rotate(180deg)`,
+                opacity: 0 
+            }
+        ], {
+            duration: duration,
+            easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+        });
+        
+        animation.onfinish = () => particle.remove();
+    }
+}
 
 // Эффект монеток для кнопки доната
 function createCoinEffect(button) {
@@ -92,7 +132,6 @@ function createCoinEffect(button) {
 
 // Эффект частиц для соцсетей
 function createParticleEffect(button, color1, color2 = null) {
-    // Простая CSS-анимация вместо Three.js для экономии ресурсов
     const container = document.getElementById('effectsContainer');
     const particleCount = 20;
     
@@ -107,7 +146,6 @@ function createParticleEffect(button, color1, color2 = null) {
         particle.style.zIndex = '1000';
         particle.style.pointerEvents = 'none';
         
-        // Чередование цветов если их два
         const color = color2 && i % 2 === 0 ? 
             `rgb(${color2 >> 16}, ${(color2 >> 8) & 255}, ${color2 & 255})` :
             `rgb(${color1 >> 16}, ${(color1 >> 8) & 255}, ${color1 & 255})`;
@@ -139,20 +177,6 @@ function createParticleEffect(button, color1, color2 = null) {
     }
 }
 
-/* Эффект для кнопки скачивания */
-.download-btn:hover {
-    animation: download-glow 2s infinite;
-}
-
-@keyframes download-glow {
-    0%, 100% {
-        box-shadow: 0 8px 20px rgba(71, 118, 230, 0.5);
-    }
-    50% {
-        box-shadow: 0 8px 30px rgba(142, 84, 233, 0.8), 0 0 40px rgba(71, 118, 230, 0.4);
-    }
-}
-
 // Добавляем CSS для анимации пульсации
 const style = document.createElement('style');
 style.textContent = `
@@ -162,6 +186,4 @@ style.textContent = `
         100% { transform: scale(1); }
     }
 `;
-
 document.head.appendChild(style);
-
