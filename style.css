@@ -1,4 +1,3 @@
-/* Основные настройки */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +18,6 @@ body {
     padding: 20px;
 }
 
-/* Шапка с логотипом */
 .header {
     text-align: center;
     margin-bottom: 40px;
@@ -72,7 +70,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* Кнопки */
 .button-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -116,7 +113,6 @@ body {
     color: white;
 }
 
-/* Эффект для кнопки скачивания */
 .download-btn:hover {
     animation: download-glow 2s infinite;
 }
@@ -135,7 +131,6 @@ body {
     color: #333;
 }
 
-/* Соцсети */
 .social-section {
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
@@ -177,7 +172,6 @@ body {
     color: white;
 }
 
-/* Скриншоты */
 .screenshots-section {
     margin-top: 60px;
 }
@@ -251,7 +245,6 @@ body {
     color: #ccc;
 }
 
-/* Подвал */
 .footer {
     text-align: center;
     padding: 30px;
@@ -268,7 +261,6 @@ body {
     line-height: 1.5;
 }
 
-/* Адаптивность для мобилок */
 @media (max-width: 768px) {
     .feature-block, .feature-block.reverse {
         flex-direction: column;
