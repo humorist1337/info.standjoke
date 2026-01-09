@@ -1,14 +1,12 @@
 const LINKS = {
-    download: "https://t.me/+l7UnOI80MvM3ODFi", // Ваш Telegram
-    donate: "https://www.donationalerts.com/r/humorist1337", // Ваш DonationAlerts
-    youtube: "https://www.youtube.com/channel/UCd2hWCQZaG6IlypY9FuLuBQ", // Замените на свой
-    telegram: "https://t.me/StandJokeTG", // Замените на свой
-    tiktok: "https://tiktok.com/@standjoke" // Замените на свой
+    download: "https://t.me/+l7UnOI80MvM3ODFi",
+    donate: "https://www.donationalerts.com/r/humorist1337",
+    youtube: "https://www.youtube.com/channel/UCd2hWCQZaG6IlypY9FuLuBQ",
+    telegram: "https://t.me/StandJokeTG",
+    tiktok: "https://tiktok.com/@standjoke"
 };
 
-// Обработчики кнопок
 document.getElementById('downloadBtn').addEventListener('click', function() {
-    // Запускаем новую анимацию для скачивания
     createDownloadEffect(this);
     setTimeout(() => {
         window.open(LINKS.download, '_blank');
@@ -21,21 +19,20 @@ document.getElementById('donateBtn').addEventListener('click', function() {
 });
 
 document.getElementById('youtubeBtn').addEventListener('click', function() {
-    createParticleEffect(this, 0xFF0000); // Красный
+    createParticleEffect(this, 0xFF0000);
     setTimeout(() => window.open(LINKS.youtube, '_blank'), 800);
 });
 
 document.getElementById('telegramBtn').addEventListener('click', function() {
-    createParticleEffect(this, 0x0088cc); // Голубой
+    createParticleEffect(this, 0x0088cc);
     setTimeout(() => window.open(LINKS.telegram, '_blank'), 800);
 });
 
 document.getElementById('tiktokBtn').addEventListener('click', function() {
-    createParticleEffect(this, 0xFF0050, 0x00F2EA); // Розовый и голубой
+    createParticleEffect(this, 0xFF0050, 0x00F2EA);
     setTimeout(() => window.open(LINKS.tiktok, '_blank'), 800);
 });
 
-// Анимация появления скриншотов при прокрутке
 const featureBlocks = document.querySelectorAll('.feature-block');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -47,7 +44,6 @@ const observer = new IntersectionObserver((entries) => {
 
 featureBlocks.forEach(block => observer.observe(block));
 
-// Эффект для кнопки скачивания (компьютерные частицы)
 function createDownloadEffect(button) {
     const container = document.getElementById('effectsContainer');
     const symbols = ['💾', '⬇️', '🎮', '🚀', '⚡', '🔧', '🛠️', '📦'];
@@ -70,7 +66,6 @@ function createDownloadEffect(button) {
         
         container.appendChild(particle);
         
-        // Анимация
         const animation = particle.animate([
             { 
                 transform: 'translate(0, 0) scale(1) rotate(0deg)',
@@ -89,7 +84,6 @@ function createDownloadEffect(button) {
     }
 }
 
-// Эффект монеток для кнопки доната
 function createCoinEffect(button) {
     const container = document.getElementById('effectsContainer');
     for (let i = 0; i < 15; i++) {
@@ -130,7 +124,6 @@ function createCoinEffect(button) {
     }
 }
 
-// Эффект частиц для соцсетей
 function createParticleEffect(button, color1, color2 = null) {
     const container = document.getElementById('effectsContainer');
     const particleCount = 20;
@@ -177,7 +170,6 @@ function createParticleEffect(button, color1, color2 = null) {
     }
 }
 
-// Добавляем CSS для анимации пульсации
 const style = document.createElement('style');
 style.textContent = `
     @keyframes pulse {
@@ -187,4 +179,3 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
