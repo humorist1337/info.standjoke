@@ -9,7 +9,7 @@
     
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="canonical" href="https://your-vercel-link.vercel.app/">
-
+    
     <link rel="icon" type="image/png" sizes="16x16" href="images/SJ16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/SJ32.png">
     <link rel="icon" type="image/png" sizes="64x64" href="images/SJ64.png">
@@ -54,96 +54,155 @@
     }
     </script>
     
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo-section">
-                <img src="images/sjny26.png" alt="Аватар StandJoke" class="avatar">
-                <div class="title-wrapper">
-                    <h1><img src="images/sj_logo.png" alt="Логотип игры StandJoke" class="logo-img"></h1>
-                    <p class="subtitle">Основная информация о проекте</p>
+    <main class="main-container">
+        <!-- Верхняя секция с логотипом (оставлена с вашего сайта) -->
+        <div class="top-brand">
+            <div class="brand-content">
+                <img src="images/sjny26.png" alt="StandJoke Avatar" class="brand-avatar">
+                <div class="brand-titles">
+                    <img src="images/sj_logo.png" alt="StandJoke Logo" class="brand-logo">
+                    <p class="brand-subtitle">Основная информация о проекте</p>
                 </div>
             </div>
-            <p class="intro-text">Добро пожаловать на официальный сайт игры StandJoke! Здесь вы можете скачать игру, поддержать проект и следить за нами в соцсетях.</p>
-        </header>
-
-        <div class="button-grid">
-            <button class="btn main-btn download-btn" id="downloadBtn">
-                <i class="fas fa-download"></i> Скачать игру
-            </button>
-            <button class="btn main-btn donate-btn" id="donateBtn">
-                <i class="fas fa-coins"></i> Поддержать проект
-            </button>
+            <p class="brand-description">Добро пожаловать на официальный сайт игры StandJoke! Здесь вы можете скачать игру, поддержать проект и следить за нами в соцсетях.</p>
         </div>
 
-        <div class="social-section">
-            <h2><i class="fas fa-hashtag"></i> Соц. сети игры</h2>
-            <div class="social-buttons">
-                <button class="btn social-btn youtube-btn" id="youtubeBtn">
-                    <i class="fab fa-youtube"></i> YouTube
-                </button>
-                <button class="btn social-btn telegram-btn" id="telegramBtn">
-                    <i class="fab fa-telegram"></i> Telegram
-                </button>
-                <button class="btn social-btn tiktok-btn" id="tiktokBtn">
-                    <i class="fab fa-tiktok"></i> TikTok
-                </button>
+        <!-- Главная карточка как на целевом сайте -->
+        <div class="hero-card">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h1 class="hero-title">StandJoke</h1>
+                <p class="hero-subtitle">Приватный сервер с уникальным контентом</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="downloadBtn">
+                        <i class="fas fa-download"></i> Скачать игру
+                    </button>
+                    <button class="btn-secondary" id="donateBtn">
+                        <i class="fas fa-coins"></i> Поддержать проект
+                    </button>
+                </div>
+                
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-tag"></i>
+                        <span>Версия 2.0.1</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Обновлено: 26.12.2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-database"></i>
+                        <span>Размер: 245 MB</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fab fa-android"></i>
+                        <span>Android 8+</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <section class="screenshots-section">
-            <h2>Игровой процесс и возможности</h2>
+        <!-- Сетка преимуществ (как на целевом сайте) -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3 class="feature-title">Приватный сервер</h3>
+                <p class="feature-desc">Стабильный приватный сервер с низким пингом и дружным комьюнити</p>
+            </div>
             
-            <div class="feature-block">
-                <div class="screenshot-wrapper">
-                    <div class="frame">
-                        <img src="images/Screenshot_2025.12.26_00.56.52.296.png" alt="Скриншот из игры StandJoke" class="screenshot" loading="lazy">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3 class="feature-title">Кастомный контент</h3>
+                <p class="feature-desc">Уникальные скины, стикеры, брелоки и эксклюзивные предметы</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="feature-title">Регулярные обновления</h3>
+                <p class="feature-desc">Новые режимы, карты и события каждую неделю</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="feature-title">Активное сообщество</h3>
+                <p class="feature-desc">Тысячи игроков, турниры и розыгрыши каждый месяц</p>
+            </div>
+        </div>
+
+        <!-- Социальные кнопки (компактно как на целевом) -->
+        <div class="social-links">
+            <button class="social-btn youtube" id="youtubeBtn">
+                <i class="fab fa-youtube"></i> YouTube
+            </button>
+            <button class="social-btn telegram" id="telegramBtn">
+                <i class="fab fa-telegram"></i> Telegram
+            </button>
+            <button class="social-btn tiktok" id="tiktokBtn">
+                <i class="fab fa-tiktok"></i> TikTok
+            </button>
+        </div>
+
+        <!-- Нижние картинки с описанием (оставлены с вашего сайта) -->
+        <div class="screenshots-section">
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <div class="screenshot-frame">
+                        <img src="images/Screenshot_2025.12.26_00.56.52.296.png" alt="Геймплей StandJoke" class="screenshot-img">
+                    </div>
+                    <div class="screenshot-caption">
+                        <h3>Захватывающий геймплей</h3>
+                        <p>Соревнуйтесь с другими игроками в битвах 5 на 5 в режиме "Закладка бомбы", а так же в других не менее интересных режимах!</p>
                     </div>
                 </div>
-                <div class="description">
-                    <h3>Захватывающий геймплей</h3>
-                    <p>Соревнуйтесь с другими игроками в битвах 5 на 5 в режиме "Закладка бомбы", а так же в других не менее интересных режимах!</p>
-                </div>
-            </div>
-
-            <div class="feature-block reverse">
-                <div class="screenshot-wrapper">
-                    <div class="frame">
-                        <img src="images/Screenshot_2025.12.26_01.00.42.296.png" alt="Еще один скриншот StandJoke" class="screenshot" loading="lazy">
+                
+                <div class="screenshot-card reverse">
+                    <div class="screenshot-frame">
+                        <img src="images/Screenshot_2025.12.26_01.00.42.296.png" alt="Сеты и инвентарь StandJoke" class="screenshot-img">
+                    </div>
+                    <div class="screenshot-caption">
+                        <h3>Собирайте красивые сеты</h3>
+                        <p>Инвентарь, магазин, рынок, промокоды и акции. Собирайте красивые инвентари, обклеивайте пушки множеством интересных стикеров и цепляйте на них брелоки!</p>
                     </div>
                 </div>
-                <div class="description">
-                    <h3>Собирайте красивые сеты</h3>
-                    <p>Инвентарь, магазин, рынок, промокоды и акции. Собирайте красивые инвентари, обклеивайте пушки множеством интересных стикеров и цепляйте на них брелоки!</p>
-                </div>
-            </div>
-
-            <div class="feature-block">
-                <div class="screenshot-wrapper">
-                    <div class="frame">
-                        <img src="images/Screenshot_2025.12.26_00.57.54.935.png" alt="Разнообразие кастомного контента" class="screenshot" loading="lazy">
+                
+                <div class="screenshot-card">
+                    <div class="screenshot-frame">
+                        <img src="images/Screenshot_2025.12.26_00.57.54.935.png" alt="Кастомный контент StandJoke" class="screenshot-img">
+                    </div>
+                    <div class="screenshot-caption">
+                        <h3>Разнообразие кастомного контента</h3>
+                        <p>Много кастомных предметов, режимов, систем и интересных идей.</p>
                     </div>
                 </div>
-                <div class="description">
-                    <h3>Разнообразие кастомного контента</h3>
-                    <p>Много кастомных предметов, режимов, систем и интересных идей.</p>
-                </div>
             </div>
-        </section>
+        </div>
 
+        <!-- Футер -->
         <footer class="footer">
             <p>StandJoke. Все права принадлежат студии AXLEBOLT LTD. | Официальный сайт игры</p>
             <p class="seo-text">Скачать StandJoke бесплатно, игра StandJoke для Android, скачать приватный сервер, приватный сервер StandJoke, приватка StandJoke, официальный сайт StandJoke</p>
         </footer>
-    </div>
+    </main>
 
     <div id="effectsContainer"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
