@@ -6,33 +6,6 @@ const LINKS = {
     tiktok: "https://tiktok.com/@standjoke"
 };
 
-document.getElementById('downloadBtn').addEventListener('click', function() {
-    createDownloadEffect(this);
-    setTimeout(() => {
-        window.open(LINKS.download, '_blank');
-    }, 600);
-});
-
-document.getElementById('donateBtn').addEventListener('click', function() {
-    createCoinEffect(this);
-    setTimeout(() => window.open(LINKS.donate, '_blank'), 800);
-});
-
-document.getElementById('youtubeBtn').addEventListener('click', function() {
-    createParticleEffect(this, 0xFF0000);
-    setTimeout(() => window.open(LINKS.youtube, '_blank'), 800);
-});
-
-document.getElementById('telegramBtn').addEventListener('click', function() {
-    createParticleEffect(this, 0x0088cc);
-    setTimeout(() => window.open(LINKS.telegram, '_blank'), 800);
-});
-
-document.getElementById('tiktokBtn').addEventListener('click', function() {
-    createParticleEffect(this, 0xFF0050, 0x00F2EA);
-    setTimeout(() => window.open(LINKS.tiktok, '_blank'), 800);
-});
-
 function createDownloadEffect(button) {
     const container = document.getElementById('effectsContainer');
     const symbols = ['💾', '⬇️', '🎮', '🚀', '⚡', '🔧', '🛠️', '📦'];
@@ -158,3 +131,53 @@ function createParticleEffect(button, color1, color2 = null) {
         animation.onfinish = () => particle.remove();
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const downloadBtn = document.getElementById('downloadBtn');
+    const donateBtn = document.getElementById('donateBtn');
+    const youtubeBtn = document.getElementById('youtubeBtn');
+    const telegramBtn = document.getElementById('telegramBtn');
+    const tiktokBtn = document.getElementById('tiktokBtn');
+
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            createDownloadEffect(this);
+            setTimeout(() => {
+                window.open(LINKS.download, '_blank');
+            }, 600);
+        });
+    }
+
+    if (donateBtn) {
+        donateBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            createCoinEffect(this);
+            setTimeout(() => window.open(LINKS.donate, '_blank'), 800);
+        });
+    }
+
+    if (youtubeBtn) {
+        youtubeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            createParticleEffect(this, 0xFF0000);
+            setTimeout(() => window.open(LINKS.youtube, '_blank'), 800);
+        });
+    }
+
+    if (telegramBtn) {
+        telegramBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            createParticleEffect(this, 0x0088cc);
+            setTimeout(() => window.open(LINKS.telegram, '_blank'), 800);
+        });
+    }
+
+    if (tiktokBtn) {
+        tiktokBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            createParticleEffect(this, 0xFF0050, 0x00F2EA);
+            setTimeout(() => window.open(LINKS.tiktok, '_blank'), 800);
+        });
+    }
+});
