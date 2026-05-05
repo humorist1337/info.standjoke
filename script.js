@@ -101,9 +101,12 @@ function createParticleEffect(button, color1, color2 = null) {
         particle.style.zIndex = '1000';
         particle.style.pointerEvents = 'none';
         
-        const color = color2 && i % 2 === 0 ? 
-            `rgb(${color2 >> 16}, ${(color2 >> 8) & 255}, ${color2 & 255})` :
-            `rgb(${color1 >> 16}, ${(color1 >> 8) & 255}, ${color1 & 255})`;
+        let color;
+        if (color2 && i % 2 === 0) {
+            color = `rgb(${color2 >> 16}, ${(color2 >> 8) & 255}, ${color2 & 255})`;
+        } else {
+            color = `rgb(${color1 >> 16}, ${(color1 >> 8) & 255}, ${color1 & 255})`;
+        }
         
         particle.style.backgroundColor = color;
         particle.style.boxShadow = `0 0 10px ${color}`;
@@ -132,7 +135,9 @@ function createParticleEffect(button, color1, color2 = null) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
+    console.log('Скрипт загружен');
+    
     const downloadBtn = document.getElementById('downloadBtn');
     const donateBtn = document.getElementById('donateBtn');
     const youtubeBtn = document.getElementById('youtubeBtn');
@@ -142,42 +147,60 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             createDownloadEffect(this);
-            setTimeout(() => {
-                window.open(LINKS.download, '_blank');
+            setTimeout(function() {
+                window.location.href = LINKS.download;
             }, 600);
         });
+        console.log('downloadBtn привязана');
     }
 
     if (donateBtn) {
         donateBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             createCoinEffect(this);
-            setTimeout(() => window.open(LINKS.donate, '_blank'), 800);
+            setTimeout(function() {
+                window.location.href = LINKS.donate;
+            }, 800);
         });
+        console.log('donateBtn привязана');
     }
 
     if (youtubeBtn) {
         youtubeBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             createParticleEffect(this, 0xFF0000);
-            setTimeout(() => window.open(LINKS.youtube, '_blank'), 800);
+            setTimeout(function() {
+                window.location.href = LINKS.youtube;
+            }, 800);
         });
+        console.log('youtubeBtn привязана');
     }
 
     if (telegramBtn) {
         telegramBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             createParticleEffect(this, 0x0088cc);
-            setTimeout(() => window.open(LINKS.telegram, '_blank'), 800);
+            setTimeout(function() {
+                window.location.href = LINKS.telegram;
+            }, 800);
         });
+        console.log('telegramBtn привязана');
     }
 
     if (tiktokBtn) {
         tiktokBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             createParticleEffect(this, 0xFF0050, 0x00F2EA);
-            setTimeout(() => window.open(LINKS.tiktok, '_blank'), 800);
+            setTimeout(function() {
+                window.location.href = LINKS.tiktok;
+            }, 800);
         });
+        console.log('tiktokBtn привязана');
     }
 });
