@@ -33,17 +33,6 @@ document.getElementById('tiktokBtn').addEventListener('click', function() {
     setTimeout(() => window.open(LINKS.tiktok, '_blank'), 800);
 });
 
-const featureBlocks = document.querySelectorAll('.feature-block');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.2 });
-
-featureBlocks.forEach(block => observer.observe(block));
-
 function createDownloadEffect(button) {
     const container = document.getElementById('effectsContainer');
     const symbols = ['💾', '⬇️', '🎮', '🚀', '⚡', '🔧', '🛠️', '📦'];
@@ -169,13 +158,3 @@ function createParticleEffect(button, color1, color2 = null) {
         animation.onfinish = () => particle.remove();
     }
 }
-
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-    }
-`;
-document.head.appendChild(style);
