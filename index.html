@@ -59,8 +59,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
     <main class="main-container">
-        <!-- Верхняя секция с логотипом (оставлена с вашего сайта) -->
+        <!-- Верхняя секция с логотипом -->
         <div class="top-brand">
             <div class="brand-content">
                 <img src="images/sjny26.png" alt="StandJoke Avatar" class="brand-avatar">
@@ -72,7 +78,7 @@
             <p class="brand-description">Добро пожаловать на официальный сайт игры StandJoke! Здесь вы можете скачать игру, поддержать проект и следить за нами в соцсетях.</p>
         </div>
 
-        <!-- Главная карточка как на целевом сайте -->
+        <!-- Главная карточка -->
         <div class="hero-card">
             <div class="hero-content">
                 <div class="hero-icon">
@@ -93,15 +99,15 @@
                 <div class="hero-meta">
                     <div class="meta-item">
                         <i class="fas fa-tag"></i>
-                        <span>Версия 2.0.1</span>
+                        <span>Версия 1.2(f2)</span>
                     </div>
                     <div class="meta-item">
                         <i class="fas fa-calendar"></i>
-                        <span>Обновлено: 26.12.2025</span>
+                        <span>Обновлено: 18.12.2025</span>
                     </div>
                     <div class="meta-item">
                         <i class="fas fa-database"></i>
-                        <span>Размер: 245 MB</span>
+                        <span>Размер: 1,6 GB</span>
                     </div>
                     <div class="meta-item">
                         <i class="fab fa-android"></i>
@@ -111,7 +117,7 @@
             </div>
         </div>
 
-        <!-- Сетка преимуществ (как на целевом сайте) -->
+        <!-- Сетка преимуществ с эффектом блика -->
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">
@@ -146,7 +152,7 @@
             </div>
         </div>
 
-        <!-- Социальные кнопки (компактно как на целевом) -->
+        <!-- Социальные кнопки -->
         <div class="social-links">
             <button class="social-btn youtube" id="youtubeBtn">
                 <i class="fab fa-youtube"></i> YouTube
@@ -159,12 +165,13 @@
             </button>
         </div>
 
-        <!-- Нижние картинки с описанием (оставлены с вашего сайта) -->
+        <!-- Скриншоты с анимациями -->
         <div class="screenshots-section">
             <div class="screenshots-grid">
-                <div class="screenshot-card">
+                <div class="screenshot-card" data-delay="0">
                     <div class="screenshot-frame">
                         <img src="images/Screenshot_2025.12.26_00.56.52.296.png" alt="Геймплей StandJoke" class="screenshot-img">
+                        <div class="frame-glow"></div>
                     </div>
                     <div class="screenshot-caption">
                         <h3>Захватывающий геймплей</h3>
@@ -172,9 +179,10 @@
                     </div>
                 </div>
                 
-                <div class="screenshot-card reverse">
+                <div class="screenshot-card reverse" data-delay="1">
                     <div class="screenshot-frame">
                         <img src="images/Screenshot_2025.12.26_01.00.42.296.png" alt="Сеты и инвентарь StandJoke" class="screenshot-img">
+                        <div class="frame-glow"></div>
                     </div>
                     <div class="screenshot-caption">
                         <h3>Собирайте красивые сеты</h3>
@@ -182,9 +190,10 @@
                     </div>
                 </div>
                 
-                <div class="screenshot-card">
+                <div class="screenshot-card" data-delay="2">
                     <div class="screenshot-frame">
                         <img src="images/Screenshot_2025.12.26_00.57.54.935.png" alt="Кастомный контент StandJoke" class="screenshot-img">
+                        <div class="frame-glow"></div>
                     </div>
                     <div class="screenshot-caption">
                         <h3>Разнообразие кастомного контента</h3>
@@ -196,8 +205,24 @@
 
         <!-- Футер -->
         <footer class="footer">
-            <p>StandJoke. Все права принадлежат студии AXLEBOLT LTD. | Официальный сайт игры</p>
-            <p class="seo-text">Скачать StandJoke бесплатно, игра StandJoke для Android, скачать приватный сервер, приватный сервер StandJoke, приватка StandJoke, официальный сайт StandJoke</p>
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <i class="fas fa-copyright"></i>
+                    <span>2025 StandJoke. Все права защищены.</span>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-studio">
+                    <i class="fas fa-building"></i>
+                    <span>Студия AXLEBOLT LTD</span>
+                </div>
+            </div>
+            <div class="seo-text">
+                <i class="fas fa-gamepad"></i>
+                <span>Скачать StandJoke бесплатно | Игра StandJoke для Android | Приватный сервер StandJoke | Официальный сайт StandJoke</span>
+            </div>
+            <div class="footer-badge">
+                <span>Официальный сайт игры</span>
+            </div>
         </footer>
     </main>
 
